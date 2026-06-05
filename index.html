@@ -106,7 +106,7 @@
             heavyGround.checkCollisions = true;
 
             // 1. CARREGAR A CIDADE DO BLENDER (Focando no objeto teimoso car1)
-            BABYLON.SceneLoader.ImportMesh("", "assets", "city.glb", scene, function (meshes) {
+            BABYLON.SceneLoader.ImportMesh("", "assets/", "city.glb", scene, function (meshes) {
                 if(meshes[0]) meshes[0].position = BABYLON.Vector3.Zero(); 
                 meshes.forEach(mesh => {
                     if (mesh.geometry) mesh.checkCollisions = true;
@@ -143,7 +143,7 @@
             let walkAnim = null;
             let isPlayingWalk = false;
 
-            BABYLON.SceneLoader.ImportMesh("", "assets", "player.glb", scene, function (newMeshes, particleSystems, skeletons, animationGroups) {
+            BABYLON.SceneLoader.ImportMesh("", "assets/", "player.glb", scene, function (newMeshes, particleSystems, skeletons, animationGroups) {
                 newMeshes.forEach(mesh => {
                     mesh.setEnabled(true);
                     mesh.isVisible = true;
